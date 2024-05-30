@@ -33,6 +33,7 @@ jsondata = json.loads(prod_json)
 
 
 total_count = jsondata["searchData"]["results"]['totalCount']
+print(total_count)
 total_page = int(total_count) // 50
 
 out_data_list = []

@@ -44,6 +44,7 @@ params = {
 in_date = date.today().strftime('%d-%b-%y')
 excel_filename = f'yatra_bus_data_{in_date}.xlsx'
 response = requests.get('https://ebus.yatra.com/businfo/busdesktop/search', params=params, headers=headers)
+print(response.status)
 data_dict_list =[]
 page_responce = response.text
 bus_data = json.loads(page_responce)
